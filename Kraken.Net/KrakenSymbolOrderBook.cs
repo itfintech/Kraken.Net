@@ -70,7 +70,7 @@ namespace Kraken.Net
         }
 
         /// <inheritdoc />
-        protected override bool DoChecksum(int checksum)
+        protected override bool DoChecksum(uint checksum)
         {
             var checksumValues = new List<string>();
             for (var i = 0; i < 10; i++)
