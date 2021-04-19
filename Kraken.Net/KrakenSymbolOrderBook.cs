@@ -87,7 +87,7 @@ namespace Kraken.Net
             }
 
             var checksumString = string.Join("", checksumValues);
-            var ourChecksumUtf = (int)Crc32Algorithm.Compute(Encoding.UTF8.GetBytes(checksumString));
+            var ourChecksumUtf = Crc32Algorithm.Compute(Encoding.UTF8.GetBytes(checksumString));
 
             if (ourChecksumUtf != checksum)
             {
