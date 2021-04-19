@@ -65,7 +65,7 @@ namespace Kraken.Net
             else
             {
                 UpdateOrderBook(data.Data.Bids, data.Data.Asks);
-                AddChecksum((int)data.Data.Checksum);
+                AddChecksum(data.Data.Checksum);
             }
         }
 
