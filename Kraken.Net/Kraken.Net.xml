@@ -1562,7 +1562,7 @@
         <member name="M:Kraken.Net.KrakenSymbolOrderBook.DoReset">
             <inheritdoc />
         </member>
-        <member name="M:Kraken.Net.KrakenSymbolOrderBook.DoChecksum(System.Int32)">
+        <member name="M:Kraken.Net.KrakenSymbolOrderBook.DoChecksum(System.UInt32)">
             <inheritdoc />
         </member>
         <member name="M:Kraken.Net.KrakenSymbolOrderBook.DoResync">

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Kraken.Net.Objects;
 using Kraken.Net.Objects.Socket;
 using Newtonsoft.Json.Linq;
@@ -33,8 +34,8 @@ namespace Kraken.Net.Converters
                 }
 
                 if (innerObject["c"] != null)
-                    orderBook.Checksum = (uint) innerObject["c"];
-                
+                    orderBook.Checksum = uint.Parse(innerObject["c"].ToString());
+
                 result.Topic = (string)arr[2];
                 result.Symbol = (string)arr[3];
             }
@@ -42,6 +43,7 @@ namespace Kraken.Net.Converters
             {
                 orderBook.Asks = arr[1]["a"].ToObject<IEnumerable<KrakenStreamOrderBookEntry>>();
                 orderBook.Bids = arr[2]["b"].ToObject<IEnumerable<KrakenStreamOrderBookEntry>>();
+                orderBook.Checksum = uint.Parse(arr[2]["c"].ToString());
                 result.Topic = (string)arr[3];
                 result.Symbol = (string)arr[4];
             }
